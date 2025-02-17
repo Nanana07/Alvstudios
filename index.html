@@ -4,41 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alv Studios</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di Alv Studios</h1>
-        <nav>
-            <ul>
-                <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#layanan">Layanan</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Alv Studios</h1>
+            <nav>
+                <ul>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
     </header>
 
+    <section id="hero">
+        <div class="container">
+            <h2>Selamat Datang di Alv Studios</h2>
+            <p>Kami menyediakan solusi kreatif untuk desain dan pengembangan web.</p>
+            <a href="#layanan" class="btn">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
     <section id="tentang">
-        <h2>Tentang Kami</h2>
-        <p>Alv Studios adalah platform kreatif untuk desain dan pengembangan web.</p>
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <p>Alv Studios adalah platform kreatif yang berfokus pada desain web, pengembangan aplikasi, dan optimasi SEO.</p>
+        </div>
     </section>
 
     <section id="layanan">
-        <h2>Layanan</h2>
-        <ul>
-            <li>Desain Web</li>
-            <li>Pengembangan Aplikasi</li>
-            <li>SEO Optimization</li>
-        </ul>
+        <div class="container">
+            <h2>Layanan Kami</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Desain Web</h3>
+                    <p>Desain modern dan responsif untuk website Anda.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-code"></i>
+                    <h3>Pengembangan Aplikasi</h3>
+                    <p>Bangun aplikasi web dan mobile yang powerful.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>SEO Optimization</h3>
+                    <p>Tingkatkan peringkat website Anda di mesin pencari.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300" alt="Project 1">
+                <img src="https://via.placeholder.com/300" alt="Project 2">
+                <img src="https://via.placeholder.com/300" alt="Project 3">
+            </div>
+        </div>
     </section>
 
     <section id="kontak">
-        <h2>Kontak</h2>
-        <p>Email: contact@alvstudios.dev</p>
+        <div class="container">
+            <h2>Kontak Kami</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan Anda" required></textarea>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Alv Studios. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Alv Studios. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-  </html>
+                                                                     </html>
