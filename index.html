@@ -62,19 +62,6 @@
         </div>
     </section>
 
-<section id="artikel">
-    <div class="container">
-        <h2>Artikel Terbaru</h2>
-        <ul>
-            {% for post in site.posts %}
-                <li>
-                    <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</section>
-
     <section id="portfolio">
         <div class="container">
             <h2>Portfolio</h2>
