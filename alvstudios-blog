@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AlvStudios</title>
+    <meta name="description" content="Blog AlvStudios - Artikel terbaru tentang digital marketing, desain, dan teknologi">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .blog-post h2 {
+            margin: 0;
+        }
+        .blog-post a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Blog - AlvStudios
+    </header>
+    <div class="container">
+        <h1>Artikel Terbaru</h1>
+        <div class="blog-post">
+            <h2><a href="artikel1.html">Branding Bisnis: Rahasia Meningkatkan Kepercayaan Pelanggan</a></h2>
+            <p>Branding bukan sekadar logo, tapi juga bagaimana pelanggan melihat bisnis Anda. Cari tahu bagaimana membangun citra yang kuat dan otentik!</p>
+        </div>
+        <div class="blog-post">
+            <h2><a href="artikel2.html">Desain Website 2025: Tren yang Harus Anda Ketahui</a></h2>
+            <p>Mulai dari dark mode hingga AI-driven UX, inilah tren desain web yang akan mendominasi tahun depan!</p>
+        </div>
+        <div class="blog-post">
+            <h2><a href="artikel3.html">SEO untuk Pemula: Cara Website Anda Muncul di Halaman Pertama Google</a></h2>
+            <p>Pelajari langkah-langkah optimasi SEO yang mudah diterapkan agar website Anda lebih dikenal dan dikunjungi banyak orang.</p>
+        </div>
+        <div class="blog-post">
+            <h2><a href="artikel4.html">Copywriting yang Menghipnotis: Seni Menulis yang Menjual</a></h2>
+            <p>Bagaimana menulis kata-kata yang tidak hanya menarik perhatian, tapi juga mendorong pembaca untuk bertindak? Simak triknya di sini!</p>
+        </div>
+        <div class="blog-post">
+            <h2><a href="artikel5.html">Rahasia Produktivitas: Teknik Pomodoro dan Cara Menerapkannya</a></h2>
+            <p>Mau kerja lebih fokus dan efisien? Teknik Pomodoro bisa jadi solusi terbaik untuk Anda!</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 AlvStudios | Semua Hak Dilindungi
+    </footer>
+</body>
+</html>
