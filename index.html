@@ -38,6 +38,39 @@
         </div>
     </section>
 
+    <section class="ai-generator">
+    <input type="text" id="prompt" placeholder="Masukkan topik konten">
+    <button onclick="generateContent()">Generate</button>
+    <div id="ai-output"></div>
+</section>
+
+<script>
+    async function generateContent() {
+        const prompt = document.getElementById('prompt').value;
+        const response = await fetch('https://api.openai.com/v1/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer API_KEY_ANDA'
+            },
+            body: JSON.stringify({
+                model: "text-davinci-003",
+                prompt: prompt,
+                max_tokens: 100
+            })
+        });
+        const data = await response.json();
+        document.getElementById('ai-output').innerHTML = data.choices[0].text;
+    }
+</script>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+<df-messenger
+    chat-title="AlvBot"
+    agent-id="AGENT_ID_ANDA"
+    language-code="id"
+></df-messenger>
+    
     <footer>
         <p>&copy; 2025 Alv Studios. All rights reserved.</p>
     </footer>
