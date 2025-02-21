@@ -1,5 +1,3 @@
-// script.js
-
 // Fitur Toggle Dark Mode
 const darkModeToggle = document.getElementById("darkModeToggle");
 
