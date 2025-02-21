@@ -49,3 +49,38 @@ document.querySelectorAll("nav ul li a").forEach(link => {
         link.style.transform = "scale(1)";
     });
 });
+
+// AI Chatbot dengan OpenAI API
+const chatbox = document.createElement("div");
+chatbox.id = "chatbox";
+chatbox.innerHTML = `
+    <div id="chatHeader">AI Chatbot</div>
+    <div id="chatBody"></div>
+    <input type="text" id="chatInput" placeholder="Ketik pertanyaan..." />
+    <button id="sendMessage">Kirim</button>
+`;
+document.body.appendChild(chatbox);
+
+// Event Listener untuk mengirim pesan
+document.getElementById("sendMessage").addEventListener("click", async () => {
+    const input = document.getElementById("chatInput").value;
+    if (!input) return;
+    
+    document.getElementById("chatBody").innerHTML += `<p class='user'>${input}</p>`;
+    document.getElementById("chatInput").value = "";
+    
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer ${process.env.OPENAI_API_KEY}"
+        },
+        body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            messages: [{ role: "user", content: input }]
+        })
+    });
+    
+    const data = await response.json();
+    document.getElementById("chatBody").innerHTML += `<p class='bot'>${data.choices[0].message.content}</p>`;
+});
