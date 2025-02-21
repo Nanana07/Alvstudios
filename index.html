@@ -3,111 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alv Studios – Solusi Kreatif Digital</title>
-    <meta name="description" content="Alv Studios menyediakan layanan desain web, pengembangan aplikasi, dan solusi kreatif untuk bisnis Anda.">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Alv Studios - Solusi AI untuk UMKM</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="container">
-            <a href="index.html">
-                <img src="assets/logo.jpg" alt="Alv Studios Logo" width="150">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="#layanan">Layanan</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                </ul>
-            </nav>
-            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="services.html">Layanan</a>
+            <a href="ai-tools.html">AI Tools</a>
+            <a href="blog.html">Blog</a>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h1>Membawa Ide Anda ke Kehidupan Digital</h1>
-            <p>Alv Studios mengubah konsep menjadi realitas digital melalui desain web, aplikasi, dan solusi kreatif.</p>
-            <a href="#layanan" class="btn">Lihat Layanan Kami</a>
+    <section class="hero">
+        <h1>Tingkatkan Bisnis UMKM dengan AI</h1>
+        <p>Solusi teknologi untuk pertumbuhan bisnis Anda.</p>
+        <a href="ai-tools.html" class="btn">Coba AI Tools</a>
+    </section>
+
+    <section class="services">
+        <h2>Layanan Kami</h2>
+        <div class="service-card">
+            <h3>Desain Web</h3>
+            <p>Website modern dan responsif untuk bisnis Anda.</p>
+        </div>
+        <div class="service-card">
+            <h3>AI Tools</h3>
+            <p>Analisis bisnis dan optimasi dengan teknologi AI.</p>
+        </div>
+        <div class="service-card">
+            <h3>Digital Marketing</h3>
+            <p>Strategi pemasaran digital yang efektif.</p>
         </div>
     </section>
 
-    <!-- Layanan Section -->
-    <section id="layanan">
-        <div class="container">
-            <h2>Layanan Kami</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Desain Web</h3>
-                    <p>Website responsif dan modern untuk brand Anda.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-code"></i>
-                    <h3>Pengembangan Aplikasi</h3>
-                    <p>Aplikasi berbasis web dan mobile yang optimal.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>SEO Optimization</h3>
-                    <p>Strategi SEO untuk meningkatkan visibilitas bisnis Anda.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kontak Section -->
-    <section id="kontak">
-        <div class="container">
-            <h2>Hubungi Kami</h2>
-            <p>Kami siap membantu Anda! Isi formulir di bawah ini.</p>
-            <form id="contact-form" action="https://formspree.io/f/xyzkbqqv" method="POST">
-                <div class="form-group">
-                    <label for="name">Nama</label>
-                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Pesan</label>
-                    <textarea id="message" name="message" placeholder="Tulis pesan Anda" required></textarea>
-                </div>
-                <button type="submit" class="btn">Kirim Pesan</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Alv Studios. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://instagram.com/alvstudios" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/alvstudios" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://linkedin.com/company/alvstudios" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
+        <p>&copy; 2025 Alv Studios. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript for Dark Mode Toggle -->
-    <script>
-        const themeToggle = document.getElementById("theme-toggle");
-        themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            if (document.body.classList.contains("dark-mode")) {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            } else {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            }
-        });
-    </script>
 </body>
-    </html>
-                
+</html>
