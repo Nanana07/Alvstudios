@@ -1,0 +1,43 @@
+:root {
+    --navy: #1A1A4F; /* Warna navy */
+    --purple: #6C5CE7; /* Warna ungu */
+    --gold: #FFD700; /* Warna emas */
+}
+
+/* Ganti warna di seluruh template */
+body {
+    background-color: var(--navy);
+    color: white;
+}
+
+header {
+    background-color: var(--purple);
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    color: var(--gold);
+}
+
+.navbar {
+    background-color: var(--navy);
+}
+
+.navbar .nav-link {
+    color: var(--gold);
+}
+
+.navbar .nav-link:hover {
+    color: white;
+}
+
+.button {
+    background-color: var(--gold);
+    color: var(--navy);
+}
+
+footer {
+    background-color: var(--navy);
+    color: white;
+    padding: 20px 0;
+}
