@@ -3,76 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alv Studios - Solusi AI untuk UMKM</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>AlvStudios - Home</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header>
+        <h1>AlvStudios</h1>
         <nav>
-            <a href="index.html">Beranda</a>
-            <a href="services.html">Layanan</a>
-            <a href="ai-tools.html">AI Tools</a>
-            <a href="blog.html">Blog</a>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="services.html">Layanan</a></li>
+                <li><a href="portfolio.html">Portofolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
         </nav>
     </header>
-
-    <section class="hero">
-        <h1>Tingkatkan Bisnis UMKM dengan AI</h1>
-        <p>Solusi teknologi untuk pertumbuhan bisnis Anda.</p>
-        <a href="ai-tools.html" class="btn">Coba AI Tools</a>
+    
+    <section id="hero">
+        <h2>Selamat Datang di AlvStudios</h2>
+        <p>Solusi digital & AI untuk UMKM agar bisnis makin berkembang.</p>
     </section>
-
-    <section class="services">
-        <h2>Layanan Kami</h2>
-        <div class="service-card">
-            <h3>Desain Web</h3>
-            <p>Website modern dan responsif untuk bisnis Anda.</p>
-        </div>
-        <div class="service-card">
-            <h3>AI Tools</h3>
-            <p>Analisis bisnis dan optimasi dengan teknologi AI.</p>
-        </div>
-        <div class="service-card">
-            <h3>Digital Marketing</h3>
-            <p>Strategi pemasaran digital yang efektif.</p>
-        </div>
-    </section>
-
-    <section class="ai-generator">
-    <input type="text" id="prompt" placeholder="Masukkan topik konten">
-    <button onclick="generateContent()">Generate</button>
-    <div id="ai-output"></div>
-</section>
-
-<script>
-    async function generateContent() {
-        const prompt = document.getElementById('prompt').value;
-        const response = await fetch('https://api.openai.com/v1/completions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer API_KEY_ANDA'
-            },
-            body: JSON.stringify({
-                model: "text-davinci-003",
-                prompt: prompt,
-                max_tokens: 100
-            })
-        });
-        const data = await response.json();
-        document.getElementById('ai-output').innerHTML = data.choices[0].text;
-    }
-</script>
-
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
-<df-messenger
-    chat-title="AlvBot"
-    agent-id="AGENT_ID_ANDA"
-    language-code="id"
-></df-messenger>
     
     <footer>
-        <p>&copy; 2025 Alv Studios. All rights reserved.</p>
+        <p>&copy; 2025 AlvStudios. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
