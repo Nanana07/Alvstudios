@@ -1,4 +1,5 @@
 // script.js
+
 // Fitur Toggle Dark Mode
 const darkModeToggle = document.getElementById("darkModeToggle");
 
@@ -13,3 +14,21 @@ window.onload = () => {
         document.body.classList.add("dark-mode");
     }
 };
+
+// Fitur Scroll to Top
+const scrollToTopButton = document.createElement("button");
+scrollToTopButton.innerText = "⬆";
+scrollToTopButton.id = "scrollToTop";
+document.body.appendChild(scrollToTopButton);
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollToTopButton.style.display = "block";
+    } else {
+        scrollToTopButton.style.display = "none";
+    }
+});
+
+scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
