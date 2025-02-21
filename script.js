@@ -61,6 +61,9 @@ chatbox.innerHTML = `
 `;
 document.body.appendChild(chatbox);
 
+// Mengambil API Key dari .env.local
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+
 // Event Listener untuk mengirim pesan
 document.getElementById("sendMessage").addEventListener("click", async () => {
     const input = document.getElementById("chatInput").value;
@@ -73,7 +76,7 @@ document.getElementById("sendMessage").addEventListener("click", async () => {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer ${process.env.OPENAI_API_KEY}"
+            "Authorization": `Bearer ${apiKey}`
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
