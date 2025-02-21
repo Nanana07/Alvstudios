@@ -4,36 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layanan - Alv Studios</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Beranda</a>
-            <a href="services.html">Layanan</a>
-            <a href="ai-tools.html">AI Tools</a>
-            <a href="blog.html">Blog</a>
-        </nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Alv Studios</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ai-tools.html">Tools AI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <header class="bg-primary text-white">
+        <div class="container text-center">
+            <h1>Layanan Kami</h1>
+            <p class="lead">Kami menawarkan berbagai layanan untuk membantu bisnis Anda.</p>
+        </div>
     </header>
 
-    <section class="services">
-        <h2>Layanan Kami</h2>
-        <div class="service-card">
-            <h3>Desain Web</h3>
-            <p>Website modern dan responsif untuk bisnis Anda.</p>
-        </div>
-        <div class="service-card">
-            <h3>AI Tools</h3>
-            <p>Analisis bisnis dan optimasi dengan teknologi AI.</p>
-        </div>
-        <div class="service-card">
-            <h3>Digital Marketing</h3>
-            <p>Strategi pemasaran digital yang efektif.</p>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3>Desain Grafis</h3>
+                    <p>Kami menyediakan layanan desain grafis untuk membantu merek Anda menonjol.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h3>Pengembangan Web</h3>
+                    <p>Kami membangun website yang responsif dan menarik untuk bisnis Anda.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h3>Pemasaran Digital</h3>
+                    <p>Kami membantu Anda menjangkau audiens yang lebih luas melalui strategi pemasaran digital yang efektif.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Alv Studios. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Alv Studios. Semua hak dilindungi.</p>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
+            </html>
