@@ -1,70 +1,108 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak - Alv Studios</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="hubungi kami, kontak, alv studios, digital agency" />
+  <meta name="description" content="Hubungi Alv Studios untuk konsultasi digital marketing dan pengembangan bisnis." />
+  <meta name="author" content="Alv Studios" />
+
+  <title>Alv Studios | Contact Us</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">Alv Studios</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Produk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ai-tools.html">Tools AI</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Contact Section -->
-    <header class="bg-primary text-white">
-        <div class="container text-center">
-            <h1>Kontak Kami</h1>
-            <p class="lead">Kami siap membantu Anda. Silakan hubungi kami melalui formulir di bawah ini.</p>
-        </div>
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- Header Section -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <span>Alv Studios</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+              <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
+    <!-- End Header Section -->
+  </div>
 
-    <section class="py-5">
-        <div class="container">
-            <form>
-                <div class="form-group">
-                    <label for="name">Nama</label>
-                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Pesan</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan Anda di sini" required></textarea>
-                </div>
-                <button type="submit" class="btn button">Kirim Pesan</button>
-            </form>
+  <!-- Contact Section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Get in Touch</h2>
+        <p>Hubungi kami untuk informasi lebih lanjut atau jadwalkan konsultasi.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <form action="mailto:contact@alvstudios.dev" method="post" enctype="text/plain">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-light py-4">
-        <div class="container text-center">
-            <p>&copy; 2023 Alv Studios. Semua hak dilindungi.</p>
+        <div class="col-md-6">
+          <div class="contact_info">
+            <h5>Our Office</h5>
+            <p>Jl. Example No. 123, Jakarta, Indonesia</p>
+            <h5>Email</h5>
+            <p><a href="mailto:contact@alvstudios.dev">contact@alvstudios.dev</a></p>
+            <h5>Phone</h5>
+            <p><a href="https://wa.me/6281336915221">+62 813-3691-5221</a></p>
+          </div>
+          <div class="map_img-box">
+            <img src="images/map-img.png" alt="Location">
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Footer Section -->
+  <footer class="footer_section">
+    <p>© 2025 Alv Studios. All Rights Reserved.</p>
+  </footer>
+  <!-- End Footer Section -->
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
-                                                                                                                             </html>
+
+    </html>
