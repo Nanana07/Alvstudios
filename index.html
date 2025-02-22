@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="digital agency, branding, website development, social media management, digital marketing, AI tools, business analytics">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="digital agency, AI tools, branding, website development, social media management, digital marketing">
   <meta name="description" content="Alv Studios adalah agensi kreatif berbasis teknologi yang menyediakan solusi digital dan AI tools untuk bisnis Anda.">
   <meta name="author" content="Alv Studios">
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <title>Alv Studios | Your Digital Growth Partner</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
 
 <body>
   <header class="header_section">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">Alv Studios</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,10 +28,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="ai-tools.html">AI Tools</a></li>
-            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/portfolio.html">Portfolio</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -39,7 +39,7 @@
     </nav>
   </header>
 
-  <section class="hero_section text-center py-5 bg-light">
+  <section class="hero_section text-center py-5 bg-dark text-white">
     <div class="container">
       <h1 class="display-4 fw-bold">Alv Studios</h1>
       <p class="lead">Agensi kreatif berbasis teknologi untuk pertumbuhan digital bisnis Anda.</p>
@@ -70,6 +70,13 @@
     </div>
   </section>
 
+  <div class="chatbot_container">
+    <button id="chatbotToggle">💬 Chat dengan AI</button>
+    <div id="chatbotBox" class="chatbot_hidden">
+      <iframe src="chatbot.html" width="100%" height="300px"></iframe>
+    </div>
+  </div>
+
   <footer class="footer_section text-center py-4 bg-dark text-white">
     <div class="container">
       <p class="mb-1">© 2025 Alv Studios. All Rights Reserved.</p>
@@ -83,4 +90,4 @@
 </body>
 
           </html>
-          
+              
