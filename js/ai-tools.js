@@ -1,4 +1,4 @@
-// AI Tools Fix - Memastikan Semua Berfungsi dengan Baik
+// AI Tools - Debugging & Perbaikan Fungsi
 
 // Chatbot AI Toggle
 const chatbotToggle = document.getElementById("chatbotToggle");
@@ -11,7 +11,7 @@ if (chatbotToggle && chatbotBox) {
 }
 
 // API Key
-const apiKey = "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"; // Ganti dengan API Key yang valid
+const apiKey = "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"; // Ganti dengan API Key yang valid
 
 async function fetchAIResponse(prompt, element) {
     element.innerHTML = "<p>⏳ Memproses...</p>";
@@ -25,11 +25,16 @@ async function fetchAIResponse(prompt, element) {
             body: JSON.stringify({
                 model: "openai/gpt-3.5-turbo",
                 messages: [
-                    { role: "system", content: "Anda adalah AI Assistant untuk analisis bisnis dan pemasaran." },
+                    { role: "system", content: "Anda adalah AI Assistant yang membantu analisis bisnis dan pemasaran." },
                     { role: "user", content: prompt }
                 ]
             })
         });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
         const data = await response.json();
         if (data.choices && data.choices.length > 0) {
             element.innerHTML = `<p><strong>Hasil:</strong> ${data.choices[0].message.content}</p>`;
@@ -38,7 +43,7 @@ async function fetchAIResponse(prompt, element) {
         }
     } catch (error) {
         console.error("Error fetching AI response:", error);
-        element.innerHTML = "<p>❌ Terjadi kesalahan, coba lagi nanti.</p>";
+        element.innerHTML = `<p>❌ Error: ${error.message}</p>`;
     }
 }
 
