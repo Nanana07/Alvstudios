@@ -1,39 +1,72 @@
-<!doctype html>
-<html lang="id"> 
- <head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>AI Tools - AlvStudios</title> 
-  <link rel="stylesheet" href="assets/style.css"> 
-  <script defer src="assets/ai-tools.js"></script> 
- </head> 
- <body> 
-  <header> 
-   <h1>AI Tools - AlvStudios</h1> 
-   <nav> 
-    <ul> 
-     <li><a href="index.html">Beranda</a></li> 
-     <li><a href="services.html">Layanan</a></li> 
-     <li><a href="ai-tools.html">AI Tools</a></li> 
-     <li><a href="portfolio.html">Portofolio</a></li> 
-     <li><a href="blog.html">Blog</a></li> 
-     <li><a href="contact.html">Kontak</a></li> 
-    </ul> 
-   </nav> 
-  </header> 
-  <section id="ai-tools"> 
-   <h2>AI Business &amp; Marketing Tools</h2> 
-   <p>Gunakan AI untuk membantu bisnis Anda berkembang lebih cepat.</p> 
-   <div class="tool-container"> 
-    <div class="tool-card"> 
-     <h3>AI Trend Analyzer</h3> 
-     <input type="text" id="trendInput" placeholder="Masukkan industri atau kategori bisnis..."> <button id="analyzeTrend">Analisis Tren</button> 
-     <div id="trendResult"></div> 
-    </div> 
-   </div> 
-  </section> 
-  <footer> 
-   <p>© 2025 AlvStudios. All Rights Reserved.</p> 
-  </footer> 
- </body>
-      </html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools - AlvStudios</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/ai-tools.js"></script>
+</head>
+<body>
+    <header class="header_section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Alv Studios</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="ai-tools.html">AI Tools</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="ai_tools_section container py-5">
+        <h2 class="text-center mb-4">🚀 AI Tools untuk Bisnis Anda</h2>
+        <p class="text-center">Gunakan AI untuk meningkatkan strategi pemasaran dan analisis bisnis secara otomatis.</p>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="ai-card">
+                    <h3>📈 AI Trend Analyzer</h3>
+                    <p>Analisis tren industri dan insight kompetitor.</p>
+                    <input type="text" id="trendInput" placeholder="Masukkan kategori bisnis...">
+                    <button id="analyzeTrend">Analisis</button>
+                    <div id="trendResult" class="loading"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ai-card">
+                    <h3>🤖 AI Marketing Assistant</h3>
+                    <p>Otomatis buat konten pemasaran yang menarik.</p>
+                    <input type="text" id="marketingInput" placeholder="Masukkan produk/layanan...">
+                    <button id="generateMarketing">Generate</button>
+                    <div id="marketingResult" class="loading"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ai-card">
+                    <h3>✍️ AI Copywriting Assistant</h3>
+                    <p>Buat teks iklan, artikel, dan deskripsi produk.</p>
+                    <input type="text" id="copyInput" placeholder="Masukkan topik...">
+                    <button id="generateCopy">Generate</button>
+                    <div id="copyResult" class="loading"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer_section text-center py-4 bg-dark text-white">
+        <div class="container">
+            <p>&copy; 2025 AlvStudios. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+         </html>
+             
