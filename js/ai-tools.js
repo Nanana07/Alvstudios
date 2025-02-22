@@ -91,3 +91,4 @@ if (generateCopyButton) {
         fetchAIResponse(`Buatkan teks iklan untuk ${copyText}.`, copyResult);
     });
 }
+alert("AI Tools berhasil dimuat!");
