@@ -17,6 +17,46 @@ a:focus {
   box-shadow: none;
 }
 
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+.dark-mode .navbar-nav .nav-link {
+  color: #f8f9fa;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  color: #fec016;
+}
+
+.dark-mode .contact_section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .contact_section .contact-form {
+  background: #2a2a2a;
+}
+
+.dark-mode .contact_section .contact-form input,
+.dark-mode .contact_section .contact-form textarea {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode .contact_section .contact-form button {
+  background: #fec016;
+  color: #222;
+}
+
+.dark-mode .contact_section .contact-form button:hover {
+  background: #ffffff;
+  color: #222;
+}
+
 /* Layout */
 .layout_padding {
   padding: 75px 0;
@@ -134,4 +174,5 @@ a:focus {
 .footer_section a {
   color: #fec016;
   font-weight: bold;
-    }
+  }
+  
