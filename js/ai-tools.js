@@ -11,7 +11,7 @@ if (chatbotToggle && chatbotBox) {
 }
 
 // API Key
-const apiKey = "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"; // Ganti dengan API Key yang valid
+const apiKey = "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"; // Ganti dengan API Key yang valid
 
 async function fetchAIResponse(prompt, element) {
     element.innerHTML = "<p>⏳ Memproses...</p>";
