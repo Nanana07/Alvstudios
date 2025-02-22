@@ -17,46 +17,6 @@ a:focus {
   box-shadow: none;
 }
 
-/* Dark Mode */
-.dark-mode {
-  background-color: #121212;
-  color: #f8f9fa;
-}
-
-.dark-mode .navbar-nav .nav-link {
-  color: #f8f9fa;
-}
-
-.dark-mode .navbar-nav .nav-link:hover {
-  color: #fec016;
-}
-
-.dark-mode .contact_section {
-  background-color: #1e1e1e;
-  color: #ffffff;
-}
-
-.dark-mode .contact_section .contact-form {
-  background: #2a2a2a;
-}
-
-.dark-mode .contact_section .contact-form input,
-.dark-mode .contact_section .contact-form textarea {
-  background: #333;
-  color: #fff;
-  border: 1px solid #555;
-}
-
-.dark-mode .contact_section .contact-form button {
-  background: #fec016;
-  color: #222;
-}
-
-.dark-mode .contact_section .contact-form button:hover {
-  background: #ffffff;
-  color: #222;
-}
-
 /* Layout */
 .layout_padding {
   padding: 75px 0;
@@ -116,6 +76,7 @@ a:focus {
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 /* Contact Section */
@@ -146,6 +107,8 @@ a:focus {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #fff;
+  color: #222;
 }
 
 .contact_section .contact-form button {
@@ -163,6 +126,18 @@ a:focus {
   background: #222;
 }
 
+/* Dropdown Fix */
+select {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+}
+
+option {
+  background-color: #fff;
+  color: #222;
+}
+
 /* Footer */
 .footer_section {
   background-color: #222;
@@ -174,5 +149,47 @@ a:focus {
 .footer_section a {
   color: #fec016;
   font-weight: bold;
+}
+
+/* Chatbot & Toggle Fix */
+.chatbot_container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.chatbot_container button {
+  background: #fec016;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chatbot_container button:hover {
+  background: #222;
+}
+
+.toggle_dark_mode {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggle_dark_mode:hover {
+  background: #fec016;
   }
   
