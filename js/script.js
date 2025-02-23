@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
-                            "Authorization": `Bearer YOUR_OPENROUTER_API_KEY`
+                            "Authorization": `Bearer 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`
                         },
                         body: JSON.stringify({
                             model: "openai/gpt-3.5-turbo",
