@@ -1,18 +1,30 @@
 /* General Styles */
-body {
-  font-family: "Poppins", sans-serif;
-  color: #222;
-  background-color: #ffffff;
+:root {
+  --primary-color: #0a192f;
+  --secondary-color: #112240;
+  --accent-color: #fec016;
+  --text-color: #ffffff;
+  --dark-text: #222;
 }
 
-a,
-a:hover,
-a:focus {
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-text);
+  background-color: #ffffff;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+a {
   text-decoration: none;
 }
 
-.btn,
-.btn:focus {
+.btn {
   outline: none !important;
   box-shadow: none;
 }
@@ -32,24 +44,24 @@ a:focus {
 
 /* Header & Navbar */
 .header_section {
-  background-color: #222;
+  background-color: var(--primary-color);
   padding: 15px 0;
 }
 
 .navbar-brand {
   font-size: 24px;
-  color: #ffffff;
+  color: var(--text-color);
   font-weight: bold;
 }
 
 .navbar-nav .nav-link {
   margin: 10px 20px;
-  color: #ffffff;
+  color: var(--text-color);
   transition: 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #fec016;
+  color: var(--accent-color);
 }
 
 .navbar-toggler {
@@ -69,7 +81,7 @@ a:focus {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .hero_area h1 {
@@ -101,8 +113,8 @@ a:focus {
 }
 
 .ai_tools_section button {
-  background: #fec016;
-  color: #fff;
+  background: var(--accent-color);
+  color: var(--text-color);
   padding: 12px 30px;
   border: none;
   border-radius: 5px;
@@ -110,16 +122,18 @@ a:focus {
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 10px;
+  transition: 0.3s ease-in-out;
 }
 
 .ai_tools_section button:hover {
-  background: #222;
+  background: var(--secondary-color);
 }
 
 /* Contact Section */
 .contact_section {
   text-align: center;
   background-color: #f8f9fa;
+  padding: 50px 0;
 }
 
 .contact_section h2 {
@@ -145,22 +159,23 @@ a:focus {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
-  color: #222;
+  color: var(--dark-text);
 }
 
 .contact_section .contact-form button {
-  background: #fec016;
-  color: #fff;
+  background: var(--accent-color);
+  color: var(--text-color);
   padding: 12px 30px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
+  transition: 0.3s ease-in-out;
 }
 
 .contact_section .contact-form button:hover {
-  background: #222;
+  background: var(--secondary-color);
 }
 
 /* Chatbot Styles */
@@ -169,7 +184,7 @@ a:focus {
   bottom: 20px;
   right: 20px;
   width: 320px;
-  background: #0a192f;
+  background: var(--primary-color);
   border-radius: 12px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -182,8 +197,8 @@ a:focus {
 }
 
 .chatbot-header {
-  background: #112240;
-  color: #fff;
+  background: var(--secondary-color);
+  color: var(--text-color);
   padding: 12px;
   text-align: center;
   font-weight: bold;
@@ -197,7 +212,7 @@ a:focus {
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: #fff;
+  color: var(--text-color);
   font-size: 18px;
   cursor: pointer;
 }
@@ -223,7 +238,7 @@ a:focus {
 }
 
 .chatbot-footer button {
-  background: #ffcc00;
+  background: var(--accent-color);
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
@@ -242,7 +257,7 @@ a:focus {
   right: 20px;
   width: 50px;
   height: 50px;
-  background: #ffcc00;
+  background: var(--accent-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -255,17 +270,30 @@ a:focus {
   width: 24px;
 }
 
-
 /* Footer */
 .footer_section {
-  background-color: #222;
+  background-color: var(--primary-color);
   text-align: center;
   padding: 20px;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .footer_section a {
-  color: #fec016;
+  color: var(--accent-color);
   font-weight: bold;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .hero_area h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .chatbot-container {
+    width: 90%;
+  }
+}
