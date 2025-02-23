@@ -1,30 +1,18 @@
 /* General Styles */
-:root {
-  --primary-color: #0a192f;
-  --secondary-color: #112240;
-  --accent-color: #fec016;
-  --text-color: #ffffff;
-  --dark-text: #222;
-}
-
 body {
   font-family: "Poppins", sans-serif;
-  color: var(--dark-text);
+  color: #222;
   background-color: #ffffff;
-  transition: background 0.3s ease-in-out;
 }
 
-/* Dark Mode */
-body.dark-mode {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
-a {
+a,
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
-.btn {
+.btn,
+.btn:focus {
   outline: none !important;
   box-shadow: none;
 }
@@ -44,24 +32,24 @@ a {
 
 /* Header & Navbar */
 .header_section {
-  background-color: var(--primary-color);
+  background-color: #222;
   padding: 15px 0;
 }
 
 .navbar-brand {
   font-size: 24px;
-  color: var(--text-color);
+  color: #ffffff;
   font-weight: bold;
 }
 
 .navbar-nav .nav-link {
   margin: 10px 20px;
-  color: var(--text-color);
+  color: #ffffff;
   transition: 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--accent-color);
+  color: #fec016;
 }
 
 .navbar-toggler {
@@ -81,7 +69,7 @@ a {
   display: flex;
   align-items: center;
   text-align: center;
-  color: var(--text-color);
+  color: #fff;
 }
 
 .hero_area h1 {
@@ -113,8 +101,8 @@ a {
 }
 
 .ai_tools_section button {
-  background: var(--accent-color);
-  color: var(--text-color);
+  background: #fec016;
+  color: #fff;
   padding: 12px 30px;
   border: none;
   border-radius: 5px;
@@ -122,18 +110,16 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 10px;
-  transition: 0.3s ease-in-out;
 }
 
 .ai_tools_section button:hover {
-  background: var(--secondary-color);
+  background: #222;
 }
 
 /* Contact Section */
 .contact_section {
   text-align: center;
   background-color: #f8f9fa;
-  padding: 50px 0;
 }
 
 .contact_section h2 {
@@ -159,89 +145,126 @@ a {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
-  color: var(--dark-text);
+  color: #222;
 }
 
 .contact_section .contact-form button {
-  background: var(--accent-color);
-  color: var(--text-color);
+  background: #fec016;
+  color: #fff;
   padding: 12px 30px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
-  transition: 0.3s ease-in-out;
 }
 
 .contact_section .contact-form button:hover {
-  background: var(--secondary-color);
+  background: #222;
 }
 
-/* Revisi CSS untuk AI Chatbot */
-
-/* Container Chatbot */
+/* Chatbot Styles */
 .chatbot-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    width: fit-content;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background: #0a192f;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Input Chatbot */
-.chatbot-input {
-    flex-grow: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    width: 250px;
+.chatbot-container.active {
+  transform: scale(1);
 }
 
-/* Tombol Kirim */
-.chatbot-button {
-    background-color: #1e1e2d;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
+.chatbot-header {
+  background: #112240;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
 }
 
-.chatbot-button:hover {
-    background-color: #3d3d5c;
+.chatbot-header button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.chatbot-body {
+  padding: 15px;
+  background: #fff;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.chatbot-footer {
+  padding: 10px;
+  background: #f4f4f4;
+  display: flex;
+}
+
+.chatbot-footer input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chatbot-footer button {
+  background: #ffcc00;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.chatbot-footer button:hover {
+  background: #e6b800;
+}
+
+.chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #ffcc00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-toggle img {
+  width: 24px;
 }
 
 
 /* Footer */
 .footer_section {
-  background-color: var(--primary-color);
+  background-color: #222;
   text-align: center;
   padding: 20px;
-  color: var(--text-color);
+  color: #fff;
 }
 
 .footer_section a {
-  color: var(--accent-color);
+  color: #fec016;
   font-weight: bold;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero_area h1 {
-    font-size: 2rem;
-  }
-
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .chatbot-container {
-    width: 90%;
-  }
 }
