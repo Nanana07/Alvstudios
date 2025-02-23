@@ -23,6 +23,8 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">Alv Studios</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button id="dark-mode-toggle" class="btn btn-outline-light">🌙</button>
+
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -72,6 +74,23 @@
       <a href="ai-tools.html" class="btn btn-primary mt-3">Jelajahi AI Tools</a>
     </div>
   </section>
+
+  <!-- AI Chatbot -->
+<div id="chatbot-container">
+  <div id="chatbot-header">
+    <strong>AI Chatbot</strong> <span id="close-chatbot">×</span>
+  </div>
+  <div id="chatbot-body">
+    <div id="chatbot-messages"></div>
+    <input type="text" id="chatbot-input" placeholder="Ketik pertanyaan...">
+    <button id="send-message">Kirim</button>
+  </div>
+</div>
+
+<!-- Tombol Buka Chatbot -->
+<button id="chatbot-toggle">
+  💬
+</button>
 
   <footer class="footer_section text-center py-4 bg-dark text-white">
     <div class="container">
