@@ -40,16 +40,40 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // AI Chatbot dengan OpenAI API
-    const chatbox = document.createElement("div");
-    chatbox.id = "chatbox";
-    chatbox.innerHTML = `
-        <div id="chatHeader">AI Chatbot</div>
-        <div id="chatBody"></div>
-        <input type="text" id="chatInput" placeholder="Ketik pertanyaan..." />
-        <button id="sendMessage">Kirim</button>
-    `;
-    document.body.appendChild(chatbox);
+    document.addEventListener("DOMContentLoaded", function () {
+  // Chatbot Functionality
+  const chatbotContainer = document.getElementById("chatbot-container");
+  const chatbotToggle = document.getElementById("chatbot-toggle");
+  const closeChatbot = document.getElementById("close-chatbot");
+  const chatbotInput = document.getElementById("chatbot-input");
+  const sendMessage = document.getElementById("send-message");
+  const chatbotMessages = document.getElementById("chatbot-messages");
+
+  chatbotToggle.addEventListener("click", () => {
+    chatbotContainer.classList.toggle("active");
+  });
+
+  closeChatbot.addEventListener("click", () => {
+    chatbotContainer.classList.remove("active");
+  });
+
+  sendMessage.addEventListener("click", () => {
+    const userMessage = chatbotInput.value.trim();
+    if (userMessage !== "") {
+      chatbotMessages.innerHTML += `<p><strong>Anda:</strong> ${userMessage}</p>`;
+      chatbotInput.value = "";
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+
+});
+
 
     // API Key harus ditentukan dengan aman
     const apiKey = "YOUR_OPENAI_API_KEY"; // Ganti dengan cara yang lebih aman (misalnya, dari backend)
