@@ -1,114 +1,95 @@
-// Cek apakah elemen ada sebelum menambahkan event listener
-document.addEventListener("DOMContentLoaded", () => {
+// Script utama untuk fitur interaktif
 
-    // Fitur Toggle Dark Mode
-    const darkModeToggle = document.getElementById("darkModeToggle");
+document.addEventListener("DOMContentLoaded", function () {
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
     if (darkModeToggle) {
-        darkModeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-        });
-
-        // Simpan preferensi mode gelap di localStorage
-        if (localStorage.getItem("darkMode") === "true") {
+        if (localStorage.getItem("darkMode") === "enabled") {
             document.body.classList.add("dark-mode");
         }
-    }
 
-    // Fitur Scroll to Top
-    const scrollToTopButton = document.createElement("button");
-    scrollToTopButton.innerText = "⬆";
-    scrollToTopButton.id = "scrollToTop";
-    scrollToTopButton.style.display = "none"; // Sembunyikan awalnya
-    document.body.appendChild(scrollToTopButton);
-
-    window.addEventListener("scroll", () => {
-        scrollToTopButton.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-
-    scrollToTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Fitur Hamburger Menu
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
-
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
         });
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-  // Chatbot Functionality
-  const chatbotContainer = document.getElementById("chatbot-container");
-  const chatbotToggle = document.getElementById("chatbot-toggle");
-  const closeChatbot = document.getElementById("close-chatbot");
-  const chatbotInput = document.getElementById("chatbot-input");
-  const sendMessage = document.getElementById("send-message");
-  const chatbotMessages = document.getElementById("chatbot-messages");
+    // Chatbot Toggle
+    const chatbotToggle = document.getElementById("chatbot-toggle");
+    const chatbotContainer = document.querySelector(".chatbot-container");
+    const closeChatbot = document.getElementById("close-chatbot");
+    const sendMessage = document.getElementById("send-message");
+    const chatbotMessages = document.getElementById("chatbot-messages");
+    const chatbotInput = document.getElementById("chatbot-input");
 
-  chatbotToggle.addEventListener("click", () => {
-    chatbotContainer.classList.toggle("active");
-  });
-
-  closeChatbot.addEventListener("click", () => {
-    chatbotContainer.classList.remove("active");
-  });
-
-  sendMessage.addEventListener("click", () => {
-    const userMessage = chatbotInput.value.trim();
-    if (userMessage !== "") {
-      chatbotMessages.innerHTML += `<p><strong>Anda:</strong> ${userMessage}</p>`;
-      chatbotInput.value = "";
-      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    if (chatbotToggle && chatbotContainer) {
+        chatbotToggle.addEventListener("click", () => {
+            chatbotContainer.classList.toggle("active");
+        });
     }
-  });
 
-  // Dark Mode Toggle
-  const darkModeToggle = document.getElementById("dark-mode-toggle");
-  darkModeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
+    if (closeChatbot) {
+        closeChatbot.addEventListener("click", () => {
+            chatbotContainer.classList.remove("active");
+        });
+    }
 
-});
-
-
-    // API Key harus ditentukan dengan aman
-    const apiKey = "YOUR_OPENAI_API_KEY"; // Ganti dengan cara yang lebih aman (misalnya, dari backend)
-
-    // Event Listener untuk mengirim pesan ke AI Chatbot
-    const sendMessageBtn = document.getElementById("sendMessage");
-    if (sendMessageBtn) {
-        sendMessageBtn.addEventListener("click", async () => {
-            const input = document.getElementById("chatInput").value.trim();
-            if (!input) return;
-
-            document.getElementById("chatBody").innerHTML += `<p class='user'>${input}</p>`;
-            document.getElementById("chatInput").value = "";
-
-            try {
-                const response = await fetch("https://api.openai.com/v1/chat/completions", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${apiKey}`
-                    },
-                    body: JSON.stringify({
-                        model: "gpt-3.5-turbo",
-                        messages: [{ role: "user", content: input }]
-                    })
-                });
-
-                if (!response.ok) throw new Error("Gagal mendapatkan respons dari server");
-
-                const data = await response.json();
-                document.getElementById("chatBody").innerHTML += `<p class='bot'>${data.choices[0].message.content}</p>`;
-            } catch (error) {
-                document.getElementById("chatBody").innerHTML += `<p class='bot'>Maaf, terjadi kesalahan.</p>`;
-                console.error(error);
+    if (sendMessage && chatbotInput) {
+        sendMessage.addEventListener("click", () => {
+            const userMessage = chatbotInput.value.trim();
+            if (userMessage !== "") {
+                chatbotMessages.innerHTML += `<p><strong>Anda:</strong> ${userMessage}</p>`;
+                chatbotInput.value = "";
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
             }
         });
     }
+
+    // AI Tools Button Handling
+    function setupAIButton(buttonId, inputId, resultId, promptText) {
+        const button = document.getElementById(buttonId);
+        const input = document.getElementById(inputId);
+        const result = document.getElementById(resultId);
+        
+        if (button && input && result) {
+            button.addEventListener("click", async () => {
+                const userInput = input.value.trim();
+                if (!userInput) {
+                    result.innerHTML = "<p>⚠️ Harap masukkan input terlebih dahulu.</p>";
+                    return;
+                }
+                result.innerHTML = "<p>⏳ Memproses...</p>";
+                try {
+                    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer YOUR_OPENROUTER_API_KEY`
+                        },
+                        body: JSON.stringify({
+                            model: "openai/gpt-3.5-turbo",
+                            messages: [
+                                { role: "system", content: promptText },
+                                { role: "user", content: userInput }
+                            ]
+                        })
+                    });
+                    const data = await response.json();
+                    if (data.choices && data.choices.length > 0) {
+                        result.innerHTML = `<p><strong>Hasil:</strong> ${data.choices[0].message.content}</p>`;
+                    } else {
+                        result.innerHTML = "<p>⚠️ Tidak ada hasil yang ditemukan.</p>";
+                    }
+                } catch (error) {
+                    console.error("Error fetching AI response:", error);
+                    result.innerHTML = "<p>❌ Terjadi kesalahan, coba lagi nanti.</p>";
+                }
+            });
+        }
+    }
+
+    // Setup AI Tools
+    setupAIButton("analyzeTrend", "trendInput", "trendResult", "Anda adalah AI yang menganalisis tren pasar.");
+    setupAIButton("generateMarketing", "marketingInput", "marketingResult", "Anda adalah AI Marketing Assistant yang membantu bisnis.");
+    setupAIButton("generateCopy", "copyInput", "copyResult", "Anda adalah AI Copywriting Assistant.");
 });
