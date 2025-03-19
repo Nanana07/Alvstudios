@@ -1,0 +1,42 @@
+/* Styling khusus untuk halaman Event Organizer */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.eo_header {
+  background: url("../assets/eo-banner.jpg") center/cover no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+}
+
+.eo_header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.eo_services {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.eo_services h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.eo_services .eo_card {
+  background: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.eo_services .eo_card:hover {
+  transform: translateY(-5px);
+}
